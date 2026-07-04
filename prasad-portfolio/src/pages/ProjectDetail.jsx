@@ -1,7 +1,8 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LuArrowLeft, LuGithub, LuExternalLink, LuTarget, LuLightbulb, LuWrench } from 'react-icons/lu';
-
+import PageWrapper from '../components/PageWrapper';
+import { projects } from '../data/portfolioData';
 
 const gradients = {
   ipl: 'from-primary-600 to-blue-400',
