@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface-light dark:bg-surface-dark text-slate-800 dark:text-slate-100 font-sans antialiased transition-colors duration-300;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::selection {
+  @apply bg-primary-300/60 text-primary-950;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-200 dark:bg-primary-900 rounded-full;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2350eb;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.progress-track {
+  @apply w-full h-2.5 rounded-full bg-primary-100 dark:bg-primary-950/60 overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full rounded-full bg-gradient-to-r from-primary-600 to-primary-400;
+}
+
+.section-card {
+  @apply bg-panel-light dark:bg-panel-dark rounded-2xl shadow-card border border-slate-100 dark:border-white/5 transition-colors duration-300;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-primary-600 dark:text-primary-300;
+}
